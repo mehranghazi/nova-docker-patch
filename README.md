@@ -27,13 +27,17 @@ Wait a few minutes. When you see `==> Nova node installed and healthy.`, your pa
 
 ## Access
 
-The panel runs at:
-
-```
-https://YOUR_SERVER_IP:4443/YOUR_SECRET_PATH/
+```bash
+cd nova-docker-patch && docker compose exec nova-node nova-access
 ```
 
 > Nova uses a self-signed certificate. In the Nova app, turn on **"My server has no domain"**.
+
+## Change password
+
+```bash
+cd nova-docker-patch && docker compose exec nova-node nova-passwd 'NewPassword'
+```
 
 ## Stop / Remove
 
